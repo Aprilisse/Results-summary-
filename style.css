@@ -1,0 +1,184 @@
+html {
+  height: 100%;
+}
+
+body {
+  align-items: center;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+  color: white;
+}
+
+:root {
+  --all-border-radius: 20px;
+  --all-margin: 10px 0;
+  --all-padding: 20px;
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--all-border-radius);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.result {
+  width: 375px;
+  height: 450px;
+  background: linear-gradient(45deg, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  border-radius: var(--all-border-radius);
+  text-align: center;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0px;
+}
+
+.circle {
+  background: linear-gradient(
+    180deg,
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
+.your-result {
+  color: hsl(241, 100%, 89%);
+}
+
+.score {
+  color: hsl(241, 100%, 89%);
+  padding: 20px 50px;
+}
+.large-font {
+  font-weight: 800;
+  font-size: 54px;
+  margin: 60px 0 0 0;
+}
+.max-value {
+  color: hsl(241, 100%, 89%);
+}
+.medium-font {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.summary {
+  width: 335px;
+  height: 450px;
+  border-radius: var(--all-border-radius);
+  padding: var(--all-padding);
+}
+.summary-text {
+  align-items: center;
+}
+.summary p {
+  color: black;
+  font-weight: 700;
+}
+.reaction {
+  color: hsl(0, 100%, 67%);
+  background-color: hsla(0, 100%, 67%, 0.2);
+  padding: var(--all-padding);
+  margin: var(--all-margin);
+  border-radius: var(--all-border-radius);
+}
+.memory {
+  color: hsl(39, 100%, 56%);
+  background-color: hsla(39, 100%, 56%, 0.2);
+  padding: var(--all-padding);
+  margin: var(--all-margin);
+  border-radius: var(--all-border-radius);
+}
+.verbal {
+  color: hsl(166, 100%, 37%);
+  background-color: hsla(166, 100%, 37%, 0.2);
+  padding: var(--all-padding);
+  margin: var(--all-margin);
+  border-radius: var(--all-border-radius);
+}
+.visual {
+  color: hsl(234, 85%, 45%);
+  background-color: hsla(234, 85%, 45%, 0.2);
+  padding: var(--all-padding);
+  margin: var(--all-margin);
+  border-radius: var(--all-border-radius);
+}
+.first-number {
+  color: hsl(0, 0%, 0%);
+}
+.second-number {
+  color: hsla(0, 0%, 0%, 0.5);
+}
+
+.right {
+  float: right;
+  width: 30%;
+}
+
+button {
+  background-color: hsl(224, 30%, 27%);
+  border: none;
+  width: 100%;
+  padding: var(--all-padding);
+  margin: var(--all-margin);
+  border-radius: 50px;
+  color: white;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+button:hover {
+  background: linear-gradient(45deg, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+/* .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  background-color: hsla(228, 45%, 44%, 0.2);
+} */
+
+@media (max-width: 376px) {
+  html {
+    width: 375px;
+    height: auto;
+  }
+  body {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: 0px;
+  }
+  .container {
+    flex-direction: column;
+    box-shadow: none;
+    width: 100%;
+  }
+  .result {
+    margin: 0px;
+  }
+}
+
+/* 1. Poprawić widok dla 375px 
+a. result musi być równy z ekranem, gradient na całość - poprawić responsywność
+b. summary musi mieć biały odstęp
+
+4. Dodać js -> po kliknięciu buttona liczy się ilość pkt, wcześniej puste okienko - dodatkowe
+5. zastanowić się dlaczego ikonki svg nie są na środku linijki
+*/
